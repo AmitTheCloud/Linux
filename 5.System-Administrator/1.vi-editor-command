@@ -1,5 +1,7 @@
 vi Commands
+
 Entering vi
+
  vi filename - The filename can be the name of an
  existing file or the name of the file
 you want to create.
@@ -8,6 +10,7 @@ you want to create.
 of altering its contents.
 
 Exiting vi
+
  :q - quit - if you have made any changes, vi
  will warn you of this, and you'll need
  to use one of the other quits.
@@ -18,6 +21,7 @@ Exiting vi
  :q! - quit without writing edit buffer to disk
 
 Positioning within text
+
 By character
  left arrow - left one character
  right arrow - right one character
@@ -25,6 +29,7 @@ By character
  space - right one character
  h - left one character
  l - right one character
+
 By word
  w - beginning of next word
  nw - beginning of nth next word
@@ -32,6 +37,7 @@ By word
  nb - back to nth previous word
  e - end of next word
  ne - end of nth next word
+
 By line
  down arrow - down one line
  up arrow - up one line
@@ -42,11 +48,13 @@ By line
  0 - first column of current line (zero)
  ^ - first character of current line
  $ - last character of current line
+
 By block
  ( - beginning of sentence
  ) - end of sentence
  { - beginning of paragraph
  } - end of paragraph
+
 By screen
  CTRL-f - forward 1 screen
  CTRL-b - backward 1 screen
@@ -55,24 +63,28 @@ By screen
  H - top line on screen
  M - mid-screen
  L - last line on screen
+
 Within file
  nG - line n within file
  1G - first line in file
  G - last line in file
 
 Begin the vi editor exercises
+
 Inserting text
  a - append text after cursor *
  A - append text at end of line *
  i - insert text before cursor *
  I - insert text at beginning of line *
  o - open a blank line after the current
+
  line for text input *
  O - open a blank line before the current
  line for text input *
  * Note: hit ESC (escape) key when finished inserting!
 
 Continue the vi exercises
+
 Deleting text
  x - delete character at cursor
  dh - delete character before cursor
@@ -122,6 +134,7 @@ Moving lines (cutting and pasting)
  line
 
 Searching / Substituting
+
  /str - search forward for str
  ?str - search backward for str
  n - find next occurrence of current string
@@ -144,6 +157,7 @@ Searching / Substituting
  of old in current line and next 5 lines
  :.,-5s/old/new - substitute new for first occurrence
  of old in current line and previous
+
 5 lines
  :%s/old/new/g - substitute new for all occurrences
  of old in the entire file
@@ -164,14 +178,18 @@ Miscellaneous commands
  :!fmt - reformat the entire file
 
 --------------------------------------------------------------------------------
+
 vi Options
+
 You can change the way vi operates by changing the value of certain options which control
 specific parts of the vi environment.
 To set an option during a vi session, use one of the commands below as required by the option:
+
  :set option_name
  :set option_name=value
 
 Some examples of the more common options are described below.
+
  :set all - shows all vi options in effect
  :set ai - set autoindent - automatically indents
  each line of text
@@ -184,8 +202,10 @@ Some examples of the more common options are described below.
  option.
  :set wm=n - set wrapmargin to n. Specifies number
  of spaces to leave on right edge of the
+
 screen before wrapping words to next
 line.
+
  :set showmode - reminds you when you are inserting
  text.
  :set ic - ignore case of characters when
@@ -195,4 +215,5 @@ Options can be set permanently by putting them in a file called .exrc in your ho
 sample .exrc file appears below. Note that you do not need the colon (:) as part of the option
 specification when you put the commands in a .exrc file. Also note that you can put them all on
 one line.
+
  set nu ai wm=5 showmode ic
